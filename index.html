@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GroupExcersice</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+
+    <div class="sidenav d-flex gap-4 m-2 nav-underline">
+      <a onclick="openSection(0)" href="#" class="nav-item nav-link fw-bold fs-3 text-light">Home</a>
+      <a onclick="openSection(1)" href="#" class="nav-item nav-link fw-bold fs-3 text-light">Group diary</a>
+      <a onclick="openSection(2)" href="#" class="nav-item nav-link fw-bold fs-3 text-light">Project</a>
+    </div>
+    
+    <div id="welcome" class="section absolute-center">
+      <div class="introduce absolute-center">
+        <h2>Welcome to group 6</h2>
+      </div>
+    </div>
+    
+    <section id="group-diary d-flex align-item-center justify-content-center" class="section">
+      <h1 class="m-4">Group diary</h1>
+      <table class="sub">
+        <table class="table table-striped-columns">
+          <thead class="table-primary">
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">MÃ SV</th>
+              <th scope="col">họ và tên</th>
+              <th scope="col">công việc được giao</th>
+              <th scope="col">kết quả</th>
+              <th scope="col">tiến độ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>22130015</td>
+              <td>Trần Nhựt Anh</td>
+              <td>Thiết kế web nhóm</td>
+              <td>Đang làm</td>
+              <td>30%</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>22130207</td>
+                <td>Phan Văn Phát</td>
+                <td>Thiết kế web nhóm</td>
+                <td>Đang làm</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>22130238</td>
+                <td>đỗ văn minh tài </td>
+                <td>Login register forgot password</td>
+                <td>Đang làm</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>22130012</td>
+                <td>nguyễn hoàng Anh</td>
+                <td>???????</td>
+                <td>?????</td>
+                <td>?????</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>21130365</td>
+                <td>đỗ quốc hưng </td>
+                <td>Login register forgot password</td>
+                <td>Đang làm</td>
+                <td>30%</td>
+              </tr>
+          </tbody>
+        </table>
+      </table>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="tabs">
+        <button class="tab-btn fs-4 fw-bold " onclick="openTab(0)">
+          Requirement
+        </button>
+        <button class="tab-btn fs-4 fw-bold" onclick="openTab(1)">
+          Design
+        </button>
+        <button class="tab-btn fs-4 fw-bold" onclick="openTab(2)">
+          Implementation
+        </button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div id="requirement" class="tab-content">
+        <table class="table table-striped-columns">
+          <thead class="table-primary">
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">Chức năng</th>
+              <th scope="col">Người đề xuất </th>
+              <th scope="col">Người thiết kế</th>
+              <th scope="col">Người thực hiện </th>
+              <th scope="col">Thời gian dự kiến </th>
+              <th scope="col">Trạng thái  </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>22130015</td>
+              <td>Trần Nhựt Anh</td>
+              <td>Thiết kế web nhóm</td>
+              <td>Đang làm</td>
+              <td>30%</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>22130207</td>
+                <td>Phan Văn Phát</td>
+                <td>Thiết kế web nhóm</td>
+                <td>Đang làm</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>22130238</td>
+                <td>đỗ văn minh tài </td>
+                <td>Login register forgot password</td>
+                <td>Đang làm</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>22130012</td>
+                <td>nguyễn hoàng Anh</td>
+                <td>???????</td>
+                <td>?????</td>
+                <td>?????</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>21130365</td>
+                <td>đỗ quốc hưng </td>
+                <td>Login register forgot password</td>
+                <td>Đang làm</td>
+                <td>30%</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="design" class="tab-content">
+        <h3>Design</h3>
+        <p>Upload or view paper-based designs here.</p>
+        <!-- Placeholder for designs -->
+        <img
+          src="design_placeholder.png"
+          alt="Design Example"
+          style="width: 100%; max-width: 400px"
+        />
+      </div>
+
+      <div id="implementation" class="tab-content">
+        <h3>Implementation</h3>
+        <div>
+          <p>HTML implementation of the feature here:</p>
+          <!-- Example HTML content for Implementation -->
+          <div class="feature-preview">Feature Preview Content</div>
+        </div>
+      </div>
+    </section>
+ 
+    <script src="js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
