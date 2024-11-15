@@ -18,5 +18,21 @@ function openSection (id) {
   list[id].style.display = "block";
   
 }
+const week = document.getElementsByClassName("tab-week");
+const listWeek = Array.from(week);
+const weekBtn = document.getElementsByClassName("btn-week");
+const listBtnWeek = Array.from(weekBtn);
+let flag = false;
+
+function openWeek ( id) {
+listWeek.forEach ((item) => item.style.display='none');
+listBtnWeek.forEach ((item) => item.style.textDecoration='none');
+ week[id].style.display = "block";
+ weekBtn[id].style.textDecoration = "underline";
+}
+function sendRedirect () {
+  window.location.href ="https://nagit09.github.io/HCL_2024/";
+}
+openWeek(0);
 openSection(2);
 openTab(0);
