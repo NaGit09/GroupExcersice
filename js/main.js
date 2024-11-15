@@ -34,5 +34,5 @@ function sendRedirect () {
   window.location.href ="https://nagit09.github.io/HCL_2024/";
 }
 openWeek(0);
-openSection(2);
+// openSection(2);
 openTab(0);
