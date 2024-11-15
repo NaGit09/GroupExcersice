@@ -2,7 +2,7 @@
 h2 {
   margin-bottom: 20px;
 }
-body {
+.wrap {
   background-image: url("/bac.webp");
   height: 100vh;
 
