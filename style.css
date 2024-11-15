@@ -1,46 +1,55 @@
-
 h2 {
   margin-bottom: 20px;
 }
+
 .wrap {
   background-image: url("https://images.unsplash.com/photo-1731360433657-bf7be6d169a6?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover; /* This will cover the entire viewport */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  /* This will cover the entire viewport */
+  background-position: center;
+  /* Centers the image */
   height: 100vh;
 }
+
 .absolute-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .introduce {
   width: 100%;
   height: 600px;
 
 }
+
 h1 {
   width: 100%;
   text-align: center;
-  margin: 40px ;
+  margin: 40px;
 }
+
 td {
-  color:  transparent;
-text-transform: capitalize;
+  color: transparent;
+  text-transform: capitalize;
 }
+
 table {
   font-size: 20px;
   border: 2px solid black;
 }
+
 /* thead {
   text-align: center;
   vertical-align: middle;
 } */
 .introduce h2 {
-color: white  ;
-font-size: 50px;
-font-weight: bold;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .nav-item {
   text-decoration: none;
   font-size: 25px;
@@ -48,6 +57,7 @@ font-weight: bold;
   margin-left: 20px;
   font-weight: bold;
 }
+
 section {
   display: none;
   width: 100%;
@@ -58,17 +68,20 @@ section {
   width: 100%;
   height: 700px;
 }
+
 #group-diary {
   display: none;
 }
+
 #projects {
   display: none;
 }
-form label, form textarea, form input, form button {
+
+/* form label, form textarea, form input, form button {
   display: block;
   width: 100%;
   margin-bottom: 15px;
-}
+} */
 
 form button {
   padding: 10px;
@@ -98,7 +111,8 @@ form button:hover {
   cursor: pointer;
 }
 
-.tab-btn.active, .tab-btn:hover {
+.tab-btn.active,
+.tab-btn:hover {
   background-color: #007bff;
   color: #fff;
 }
@@ -119,15 +133,174 @@ form button:hover {
   background-color: #f9f9f9;
   margin-top: 10px;
 }
+
 .tab-week {
   display: none;
 }
+
 .btn-week {
-background-color: transparent;
-border: none;
+  background-color: transparent;
+  border: none;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+
+
+
+
+/* ----LOGIN---- */
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid #343a40;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.color-register {
+  color: #ffffff;
+}
+
+
+.nav-pills .nav-link.active {
+  color: #007bff !important;
+  /* Màu xanh cho tab đang chọn */
+  background-color: #343a40;
+  /* Màu nền tùy chỉnh cho tab */
+}
+
+#ex1 {
+  border: none;
+}
+
+.nav-pills .nav-link.inactive {
+  color: white !important;
+  /* Màu trắng cho tab không chọn */
+}
+
+.nav-link:hover {
+  color: #007bff;
+  /* Màu xanh khi hover */
+}
+
+
+.login-form,
+.register-form {
+  background-color: #343a40;
+  padding: 20px;
+  max-height: 800px;
+}
+
+.card.bg-dark {
+  background-color: #343a40;
+}
+
+.nav-justified>.nav-link,
+.nav-justified .nav-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.login-form,
+.register-form {
+  background-color: #303030;
+  height: auto;
+}
+
+.form-outline .form-control {
+  min-height: auto;
+  padding-top: .32rem;
+  padding-bottom: .32rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  border: 1px solid #cccccc !important;
+  background-color: transparent;
+  /* Đảm bảo nền không che mất viền */
+  color: #cccccc;
+  /* Màu chữ trắng cho trường nhập liệu */
+  transition: all .2s linear;
+}
+
+#tab-login,
+#registerTitle {
+  background-color: #3c3c3c;
+}
+
+#registerForm {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.form-outline .form-control {
+  min-height: auto;
+  padding-top: .32rem;
+  padding-bottom: .32rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: all .2s linear;
+}
+
+.form-outline .form-control~.form-label {
+  position: absolute;
+  top: 0;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  left: .75rem;
+  padding-top: .37rem;
+  pointer-events: none;
+  transform-origin: 0 0;
+  transition: all .2s ease-out;
+  color: var(--mdb-form-control-label-color);
+  margin-bottom: 0;
+}
+
+.form-outline .form-control:focus {
+  background-color: #343a40;
+  border-color: #007bff;
+  color: #ffffff;
+  outline: none;
+}
+
+.form-outline .form-control:focus~.form-label,
+.form-outline .form-control.active~.form-label {
+  transform: translateY(-1rem) translateY(0.1rem) scale(0.8);
+}
+
+.form-outline {
+  position: relative;
+  width: 100%;
 }
