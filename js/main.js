@@ -31,7 +31,7 @@ listBtnWeek.forEach ((item) => item.style.textDecoration='none');
  weekBtn[id].style.textDecoration = "underline";
 }
 function sendRedirect () {
-  window.location.href ="https://nagit09.github.io/HCL_2024/";
+  window.location.href ="https://nagit09.github.io/MasterChefBlog/";
 }
 openWeek(0);
 // openSection(2);
