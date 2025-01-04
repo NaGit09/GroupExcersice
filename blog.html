@@ -13,17 +13,20 @@
       box-sizing: border-box;
     }
 
+    /* Body và Flexbox để định vị footer */
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      color: #333;
-      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Đảm bảo chiều cao tối thiểu là chiều cao màn hình */
       margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
     }
 
     /* Header */
     header {
-      background: linear-gradient(135deg, #007acc, #005fa3);
+      background-color: #2a9d8f;
       color: white;
       text-align: center;
       padding: 20px;
@@ -37,6 +40,7 @@
 
     /* Main content */
     main {
+      flex: 1; /* Giúp phần nội dung chính giãn ra để đẩy footer xuống dưới */
       max-width: 900px;
       margin: 20px auto;
       padding: 10px;
@@ -44,16 +48,16 @@
 
     /* Card layout */
     .card {
-      background: white;
+      background-color: white;
       margin-bottom: 20px;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
     }
 
     h2 {
       font-weight: 600;
-      color: #007acc;
+      color: #264653;
       margin-bottom: 10px;
     }
 
@@ -65,28 +69,29 @@
     ul li {
       margin: 10px 0;
       padding: 10px 15px;
-      background: #f4f4f9;
-      border-left: 5px solid #007acc;
+      background-color: #e9ecef;
+      border-left: 5px solid #2a9d8f;
       border-radius: 5px;
       transition: transform 0.2s ease, background 0.3s ease;
     }
 
     ul li a {
       text-decoration: none;
-      color: #007acc;
+      color: #2a9d8f;
       font-weight: 500;
     }
 
     ul li:hover {
       transform: scale(1.02);
-      background: #eaf5ff;
+      background-color: #dee2e6;
     }
 
     /* Evaluation form */
     label {
-      font-weight: 600;
+      font-weight: 500;
+      margin-bottom: 5px;
       display: block;
-      margin-bottom: 10px;
+      color: #495057;
     }
 
     input {
@@ -98,38 +103,52 @@
       font-size: 16px;
     }
 
+    p {
+      font-size: 16px;
+      color: #495057;
+    }
+
     button {
-      background: #007acc;
+      background-color: #2a9d8f;
       color: white;
       border: none;
       border-radius: 5px;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     button:hover {
-      background: #005fa3;
+      background-color: #21867a;
       transform: scale(1.05);
     }
 
     #evaluation-result {
       margin-top: 10px;
       font-size: 16px;
-      color: green;
+      color: #264653;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       color: white;
-      background: #007acc;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      background: linear-gradient(135deg, #2a9d8f, #21867a);
+      border-top: 2px solid #21867a;
       box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f4f4f9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -141,9 +160,10 @@
     <section id="list-results" class="card">
       <h2>Những gì tôi đã làm/học được</h2>
       <ul id="results-list">
-        <li><a href="https://nagit09.github.io/HCL_2024/" target="_blank">Xây dựng web nhóm</a></li>
+        
         <li><a href="https://nagit09.github.io/MasterChefBlog/blog.html" target="_blank">Trang Blog</a></li>
         <li><a href="https://nagit09.github.io/MasterChefBlog/blogDetail.html" target="_blank">Chi tiết sản phẩm</a></li>
+        <li><a href="https://nagit09.github.io/HCL_2024/" target="_blank">Xây dựng web nhóm</a></li>
         <li><a href="" target="_blank">Style guide File & Directory</a></li>
       </ul>
     </section>
@@ -155,7 +175,7 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Lab 5 Cá nhân - Thiết kế bởi Tôi</p>
+    <p>&copy; 2025 Lab 5 Cá nhân - Thiết kế bởi <a href="#">Tôi</a></p>
   </footer>
 </body>
 </html>
