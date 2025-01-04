@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 5 - Result</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,141 +13,131 @@
         }
 
         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f7;
+            color: #444;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            padding: 40px;
         }
 
-        /* Header */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
         header {
-            background-color: #2a9d8f;
-            color: white;
             text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
 
         header h1 {
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 2.5rem;
+            color: #2a6b9f;
+            font-weight: 500;
+            text-transform: uppercase;
         }
-
 
         main {
-            flex: 1;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
+
         .card {
-            background-color: white;
-            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-left: 6px solid #2a6b9f;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        h2 {
-            font-weight: 600;
-            color: #264653;
-            margin-bottom: 10px;
+        .card h2 {
+            font-size: 1.8rem;
+            color: #2a6b9f;
+            margin-bottom: 20px;
         }
 
-        ul {
+        .card ul {
             list-style: none;
             padding: 0;
         }
 
-        ul li {
-            margin: 10px 0;
-            padding: 10px 15px;
-            background-color: #e9ecef;
-            border-left: 5px solid #2a9d8f;
-            border-radius: 5px;
-            transition: transform 0.2s ease, background 0.3s ease;
+        .card ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 18px;
+            padding: 14px;
+            border-radius: 6px;
+            border-left: 4px solid #2a6b9f;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        ul li a {
+        .card ul li:hover {
+            transform: translateX(8px);
+            background-color: #e5eff7;
+        }
+
+        .card ul li a {
+            color: #2a6b9f;
             text-decoration: none;
-            color: #2a9d8f;
+            font-size: 1.3rem;
             font-weight: 500;
         }
 
-        ul li:hover {
-            transform: scale(1.02);
-            background-color: #dee2e6;
+        .evaluation {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            border-left: 6px solid #2a6b9f;
         }
 
-        /* Evaluation form */
-        label {
-            font-weight: 500;
-            margin-bottom: 5px;
-            display: block;
-            color: #495057;
+        .evaluation p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
         }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
+        .evaluation .percentage {
+            font-size: 1.5rem;
+            color: #2a6b9f;
+            font-weight: 600;
         }
 
-        p {
-            font-size: 16px;
-            color: #495057;
-        }
-
-        button {
-            background-color: #2a9d8f;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        button:hover {
-            background-color: #21867a;
-            transform: scale(1.05);
-        }
-
-        #evaluation-result {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #264653;
+        .evaluation p span {
+            font-weight: 600;
+            color: #2a6b9f;
         }
 
     </style>
 </head>
 <body>
-<header>
-    <h1>Kết quả cá nhân - Lab 5</h1>
-</header>
-<main>
-    <section id="list-results" class="card">
-        <h2>Những gì tôi đã làm/học được</h2>
-        <ul id="results-list">
-            <li><a href="https://nagit09.github.io/MasterChefBlog/about.html" target="_self">Trang About</a></li>
-            <li><a href="https://nagit09.github.io/HCL_2024/forgotpass.html" target="_self">Forgot password</a></li>
-            <li><a href="" target="_self">Style guide Image</a></li>
-        </ul>
-    </section>
-    <section id="self-evaluation" class="card">
-        <h2>Tự đánh giá</h2>
-        <label for="evaluation">Đánh giá bản thân (%):</label>
-        <input type="number" id="evaluation" min="0" max="100" value="20" readonly>
-        <p id="evaluation-result">Bạn đã tự đánh giá 20% đóng góp vào project nhóm.</p>
-    </section>
-</main>
+<div class="container">
+    <header>
+        <h1>Kết quả cá nhân</h1>
+    </header>
+    <main>
+        <section class="evaluation" id="self-evaluation">
+            <h2>Tự đánh giá</h2>
+            <p><span>Đánh giá bản thân:</span> <span class="percentage">20%</span></p>
+        </section>
 
+        <section class="card" id="list-results">
+            <h2>Những trang đã làm:</h2>
+            <ul>
+                <li><a href="https://nagit09.github.io/MasterChefBlog/about.html" target="_blank">Trang About</a></li>
+                <li><a href="https://nagit09.github.io/HCL_2024/forgotpass.html" target="_blank">Forgot password</a></li>
+                <li><a href="" target="_self">Style guide Image</a></li>
+            </ul>
+        </section>
+    </main>
+</div>
 </body>
 </html>
