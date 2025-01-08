@@ -58,7 +58,7 @@ section {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 700px;
+  
 }
 
 #group-diary {
@@ -68,9 +68,7 @@ section {
 #projects {
   display: none;
 }
-#StyleGuide {
-  height: 1000px;
-}
+
 form button {
   padding: 10px;
   background-color: #007bff;

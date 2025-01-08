@@ -655,9 +655,125 @@
             <p>This is the content of Tab 3.</p>
           </div>
           <div class="tab-pane" id="tab5">
-            <h4>Content for Tab 3</h4>
-            <p>This is the content of Tab 3.</p>
-          </div>
+            <h4>Style Guide: Cấu Trúc File và Directory Cho Project Web</h4>
+            <ol>
+                <li>
+                    <strong>Cấu trúc tổng quan</strong>
+                    <p>Cấu trúc thư mục nên được tổ chức gọn gàng và phân tách theo chức năng để dễ quản lý và mở rộng. Dưới đây là ví dụ cấu trúc thư mục chuẩn cho một project web:</p>
+                    <pre><code>project/
+├── css/                      # Thư mục chứa tất cả các file CSS
+│   ├── about.css             # Style cho trang About
+│   ├── blog.css              # Style cho trang danh sách Blog
+│   ├── blogDetail.css        # Style cho trang chi tiết Blog
+│   ├── contact.css           # Style cho trang Contact
+│   ├── NavbarAndFooter.css   # Style cho Navbar và Footer (dùng chung)
+│   ├── reset.css             # Reset hoặc Normalize CSS
+│   ├── style.css             # Style tổng quan cho toàn bộ website
+├── image/                    # Thư mục chứa tất cả hình ảnh
+│   ├── logo.png              # Logo của website
+│   ├── background.jpg        # Hình nền chung của website
+│   ├── blog/                 # Hình ảnh liên quan đến blog
+│       ├── blog1.jpg
+│       ├── blog2.jpg
+├── js/                       # Thư mục chứa tất cả các file JavaScript
+│   ├── main.js               # Code JS chính (chức năng toàn trang)
+│   ├── navbar.js             # Code JS cho Navbar
+│   ├── validation.js         # Code kiểm tra form (liên hệ, đăng ký, ...)
+├── about.html                # Trang About (Giới thiệu)
+├── blog.html                 # Trang danh sách Blog
+├── blogDetail.html           # Trang chi tiết Blog
+├── contact.html              # Trang Contact (Liên hệ)
+├── index.html                # Trang chủ
+├── menu.html                 # Trang Menu
+├── README.md                 # File tài liệu hướng dẫn sử dụng project</code></pre>
+                </li>
+                <li>
+                    <strong>Quy tắc đặt tên</strong>
+                    <ol>
+                        <li>
+                            <strong>Thư mục</strong>
+                            <ul>
+                                <li>Sử dụng tiếng Anh để đảm bảo phù hợp với chuẩn quốc tế.</li>
+                                <li>Không dấu, không khoảng trắng. Dùng dấu gạch ngang (-) để phân cách từ nếu cần.</li>
+                                <li>Ví dụ: <code>image/</code>, <code>css/</code>, <code>js/</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>File</strong>
+                            <ul>
+                                <li>Tên file phải phản ánh rõ ràng nội dung của nó. Ví dụ: <code>about.html</code>, <code>blog.css</code>.</li>
+                                <li>Tách từ bằng dấu gạch ngang (-). Ví dụ: <code>blog-detail.html</code>, <code>reset.css</code>.</li>
+                                <li>Sử dụng chữ thường.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>Chức năng các thư mục</strong>
+                    <ol>
+                        <li>
+                            <strong>Thư mục css/</strong>
+                            <ul>
+                                <li>Chứa tất cả các file CSS của project.</li>
+                                <li>File chung:
+                                    <ul>
+                                        <li><code>reset.css</code>: Reset hoặc normalize các style mặc định của trình duyệt.</li>
+                                        <li><code>style.css</code>: Style tổng quan, các định nghĩa màu sắc, typography chung.</li>
+                                        <li><code>NavbarAndFooter.css</code>: Style dùng chung cho Navbar và Footer.</li>
+                                    </ul>
+                                </li>
+                                <li>File riêng từng trang:
+                                    <ul>
+                                        <li><code>about.css</code>: Style cho trang About.</li>
+                                        <li><code>contact.css</code>: Style cho trang Contact.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Thư mục image/</strong>
+                            <ul>
+                                <li>Lưu trữ tất cả hình ảnh sử dụng trong project:</li>
+                                <li>Logo và hình nền chung:
+                                    <ul>
+                                        <li><code>logo.png</code>: Logo chính của website.</li>
+                                        <li><code>background.jpg</code>: Hình nền chung cho website.</li>
+                                    </ul>
+                                </li>
+                                <li>Hình ảnh chuyên biệt:
+                                    <ul>
+                                        <li><code>blog/</code>: Lưu trữ hình ảnh liên quan đến blog.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Thư mục js/</strong>
+                            <ul>
+                                <li>Chứa các file JavaScript được tách theo chức năng:</li>
+                                <li><code>main.js</code>: Chứa các chức năng chính của website (ví dụ: hiệu ứng scroll, xử lý sự kiện toàn trang).</li>
+                                <li><code>navbar.js</code>: Code điều hướng hoặc các sự kiện liên quan đến Navbar.</li>
+                                <li><code>validation.js</code>: Code kiểm tra form cho các trang như Contact hoặc Đăng ký.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Các file HTML</strong>
+                            <ul>
+                                <li>Trang chủ: <code>index.html</code>.</li>
+                                <li>Trang giới thiệu: <code>about.html</code>.</li>
+                                <li>Trang blog:
+                                    <ul>
+                                        <li><code>blog.html</code>: Hiển thị danh sách các bài blog.</li>
+                                        <li><code>blogDetail.html</code>: Hiển thị nội dung chi tiết của một bài blog.</li>
+                                    </ul>
+                                </li>
+                                <li>Trang liên hệ: <code>contact.html</code>.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
         </div>
       </div>
     </section>
