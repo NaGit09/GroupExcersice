@@ -58,7 +58,6 @@ section {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
   height: 700px;
 }
 
@@ -69,7 +68,9 @@ section {
 #projects {
   display: none;
 }
-
+#StyleGuide {
+  height: 1000px;
+}
 form button {
   padding: 10px;
   background-color: #007bff;
@@ -285,4 +286,32 @@ form button:hover {
 .form-outline {
   position: relative;
   width: 100%;
+}
+.tabs {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.tab {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #f9f9f9;
+  margin-right: 5px;
+}
+.tab.active {
+  background-color: #fff;
+  font-weight: bold;
+  border-top: 2px solid #007bff;
+}
+.tab-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
 }

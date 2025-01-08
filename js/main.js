@@ -37,6 +37,19 @@ openWeek(0);
 // openSection(2);
 openTab(0);
 
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+      // Remove active class from all tabs
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      // Add active class to the clicked tab
+      tab.classList.add('active');
+
+      // Hide all tab panes
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+      // Show the corresponding tab pane
+      document.getElementById(tab.getAttribute('data-target')).classList.add('active');
+  });
+});
 
 
 
